@@ -28,6 +28,6 @@ for bootentry in ${LOADER_DIR}/${TARGET_FILENAMES}; do
     sed -i 's/grub_class '${SOURCE_CLASS}'/grub_class '${TARGET_CLASS}'/' ${bootentry}
 done
 
-echo "Done! Run 'grub2-mkconfig' to regenerate grub.cfg"
+echo "Done! Run 'grub2-mkconfig' with proper destination file to regenerate your grub.cfg"
 echo "To reverse: swap SOURCE_CLASS with TARGET_CLASS and re-run."
 echo "Backup files have been created and can be restored at any time."
