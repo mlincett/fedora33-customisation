@@ -4,12 +4,15 @@
 # This should allow GRUB themes to display the correct Fedora icon.
 # 
 # WARNING: ALTERING BOOTLOADER FILES COULD PREVENT THE SYSTEM TO BOOT
-# USE AT OWN RISK
+#          BACKUP FILES ARE CREATED, BUT ARE OVERWRITTEN IF SCRIPT IS RUN MORE THAN ONCE
+#          USE AT OWN RISK
 #
 # Documentation:
 # - https://fedoraproject.org/wiki/Changes/BootLoaderSpecByDefault
 # - https://www.freedesktop.org/wiki/Specifications/BootLoaderSpec/
 # - https://systemd.io/BOOT_LOADER_SPECIFICATION/
+#
+# NOTE: BLS files can be re-generated with kernel-install
 #
 
 LOADER_DIR='/boot/loader/entries'  # directory hosting bootloader entries (BLS config files)
