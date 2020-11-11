@@ -17,8 +17,10 @@ TARGET_FILENAMES='*fc3[2-3]*.conf' # wildcard to match Fedora 32 and Fedora 33 k
 SOURCE_CLASS='kernel'              # 'grub_class' to modify
 TARGET_CLASS='fedora'              # 'grub_class' to set (use 'Linux' for a more generic icon)
 
+echo "Changing 'grub_class ${SOURCE_CLASS}' to 'grub_class ${TARGET_CLASS}' in ${LOADER_DIR}..."
+
 for bootentry in ${LOADER_DIR}/${TARGET_FILENAMES}; do
-    echo "Backup and edit ${bootentry} ...";
+    echo "Backup and edit ${bootentry}...";
     cp ${bootentry} ${bootentry}.bak
     sed -i 's/grub_class '${SOURCE_CLASS}'/grub_class '${TARGET_CLASS}'/' ${bootentry}
 done
